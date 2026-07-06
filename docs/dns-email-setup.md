@@ -61,11 +61,12 @@ Start with `p=none` (monitor only). After ~2 weeks with mail passing, tighten to
 
 ## 5. Forwarding aliases (in Migadu, NOT Resend, NOT DNS)
 
-In **Migadu → Aliases**, create three aliases, each forwarding to `marzenamonit@gmail.com`:
+In **Migadu → Aliases**, create four aliases, each forwarding to `marzenamonit@gmail.com`:
 
 - `marzena@smoothlyoperatingnursery.com` → marzenamonit@gmail.com
 - `info@smoothlyoperatingnursery.com` → marzenamonit@gmail.com
 - `enquiries@smoothlyoperatingnursery.com` → marzenamonit@gmail.com
+- `hello@smoothlyoperatingnursery.com` → marzenamonit@gmail.com  _(shown publicly on the site; the enquiry form delivers here)_
 
 Migadu aliases can forward to an external address; no mailbox is required. Migadu applies SRS so forwarding to Gmail passes SPF.
 
