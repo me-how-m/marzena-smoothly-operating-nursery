@@ -21,7 +21,7 @@ These are wired with placeholders and should be replaced before go-live:
 
 - **Booking:** `https://calendly.com/YOUR-LINK/free-nursery-operations-call` (Calendly)
 - **Form:** the contact form is a static demo; swap in a Tally embed (`TALLY_FORM_EMBED_CODE_HERE`) or point the form at a backend
-- **Email:** `hello@smoothlyoperatingnursery.co.uk`
+- **Email:** `hello@smoothlyoperatingnursery.com`
 
 ## Develop
 
