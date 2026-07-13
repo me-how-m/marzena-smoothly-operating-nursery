@@ -537,7 +537,7 @@
         <div>
           <div style="font-family:Poppins,sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,246,239,0.55);margin-bottom:16px;">Get in touch</div>
           <div style="display:flex;flex-direction:column;gap:11px;">
-            <span style="font-size:15px;color:rgba(250,246,239,0.78);">hello at smoothlyoperatingnursery dot com</span>
+            <span class="email-obf" data-ctx="footer" style="font-size:15px;color:rgba(250,246,239,0.78);">hello at smoothlyoperatingnursery dot com</span>
             <a href="#contact" class="footer-link" style="font-size:15px;color:#FAF6EF;text-decoration:none;">Contact form</a>
             <a href="https://calendly.com/marzenamonit/smoothly_operating_nursery_20m_discovery_call" target="_blank" rel="noopener" class="footer-link" style="font-size:15px;color:#FAF6EF;text-decoration:none;">Book a call</a>
             <a href="privacy.html" class="footer-link" style="font-size:15px;color:#FAF6EF;text-decoration:none;">Privacy Policy</a>
@@ -678,6 +678,25 @@
       success.style.display = 'none';
       form.style.display = 'block';
     });
+  })();
+
+  // ---- Upgrade obfuscated email text to a real clickable mailto (assembled at runtime;
+  //      the valid address never appears in the static HTML, so harvesters don't see it) ----
+  (function () {
+    var user = 'hello', domain = 'smoothlyoperatingnursery', tld = 'com';
+    var addr = user + '@' + domain + '.' + tld;
+    var els = document.querySelectorAll('.email-obf');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      var a = document.createElement('a');
+      a.href = 'mailto:' + addr;
+      a.textContent = addr;
+      if (el.getAttribute('data-ctx') === 'footer') {
+        a.className = 'footer-link';
+        a.style.cssText = 'font-size:15px;color:#FAF6EF;text-decoration:none;';
+      }
+      el.replaceWith(a);
+    }
   })();
 </script>
 <script type="application/ld+json">
